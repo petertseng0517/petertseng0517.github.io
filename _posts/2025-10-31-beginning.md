@@ -37,8 +37,102 @@ categories: [心得]     # 定義標籤和分類
 * 鼓勵持續學習和記錄： 將寫心得變成一個有成就感的習慣（例如每次更新都會看到網頁內容變化），驅使你不斷學習新的東西並記錄下來。
 * 作為教學資源： 你的心得筆記可能成為幫助其他初學者的寶貴資源，這也能進一步提升你在技術社群中的價值。
 
-> 下面亂寫一下。
+## 步驟
 
-```python
-# 這裡也可以放程式碼或技術筆記
-print("Markdown 寫作就是這麼簡單！")
+### 步驟一：建立 GitHub Pages 儲存庫
+您需要為您的部落格建立一個「用戶級頁面」儲存庫。
+1. 登入 GitHub，點選右上角的 + 號，選擇 New repository。
+2. 設定儲存庫名稱（非常重要）：
+    * 儲存庫名稱必須是您的 GitHub 用戶名加上 .github.io。
+    * 範例：如果您的用戶名是 your-username，則儲存庫名稱為 your-username.github.io。
+3. 設定公開性 (Public)： 選擇 Public，因為 GitHub Pages 的免費託管服務主要針對公開儲存庫。
+4. 建立儲存庫： 點擊 Create repository。
+
+### 步驟二：選擇 Jekyll 佈景主題並初始化
+為了讓您的部落格看起來專業，我們直接使用一個現成的 Jekyll 佈景主題。
+1. 使用 GitHub 佈景主題選擇器：
+    * 進入您剛建立的儲存庫 (your-username.github.io)。
+    * 點擊上方的 Settings（設定）標籤。在左側邊欄找到 Pages（頁面）。
+    * 在「Build and deployment」（建置與部署）下的 Theme chooser（佈景主題選擇器）中，點擊 Change theme。
+    * GitHub 會提供一些預設的 Jekyll 佈景主題（例如 Jekyll-theme-minimal 或 Jekyll-theme-cayman）。選擇一個您喜歡的，然後點擊 Select theme。
+2. 檔案生成： GitHub 會自動在您的儲存庫中加入幾個必要檔案，包含：_config.yml：網站的設定檔。index.md 或 README.md：網站的首頁內容。
+
+### 步驟三：設定您的部落格資訊 (_config.yml)
+1. 在您的 GitHub 儲存庫中，點擊 _config.yml 檔案，然後點擊右邊的鉛筆圖示 ($\text{Edit this file}$) 進行編輯。
+2. 您可以在這裡設定部落格的標題、描述、作者等資訊。
+    * title: 您的部落格名稱（例如：[您的名字] 的閱讀心得與筆記）
+    * description: 簡短描述（例如：分享我的程式碼筆記、閱讀心得與生活觀察。）
+    * theme: 保持不變 (這是您剛才選擇的主題名稱)。
+3. 完成後，滾動到頁面最下方，點擊 Commit changes (提交變更)。
+
+### 步驟四：等待網站發佈並訪問
+1. 等待建置： 在您提交變更後，GitHub Pages 會自動開始建置您的網站。這通常需要幾分鐘。
+2. 查看狀態： 您可以在 Settings $\rightarrow$ Pages 頁面看到建置狀態。當狀態顯示為 Your site is live at... 時，就表示成功了。
+3. 訪問您的部落格： 打開瀏覽器，輸入您的網址：$$\text{[https://your-username.github.io](https://your-username.github.io)}$$
+
+### 步驟五：撰寫您的第一篇閱讀心得 (本地操作)
+現在，我們要將儲存庫複製到您的電腦上，以便在您選擇的編輯器中寫作。
+5.1. 複製儲存庫到本地
+1. 在您的 GitHub 儲存庫頁面，點擊 Code 按鈕，複製 HTTPS 或 SSH 連結。
+2. 打開您電腦上的命令列或終端機 (Terminal)。
+3. 執行 Git 指令將儲存庫複製到您的電腦：
+```
+git clone [您複製的連結]
+cd your-username.github.io
+```
+
+4. 使用您選擇的 Markdown 編輯器（例如 VS Code 或 Typora）打開這個資料夾。
+
+5.2. 撰寫心得文章
+1. 建立 _posts 資料夾：
+    * 如果您的主題已經有這個資料夾，則直接使用。
+    * 如果沒有，請在儲存庫的根目錄下，手動建立一個名為 _posts 的資料夾。
+2. 建立文章檔案：
+    * 在 _posts 資料夾內，建立一個新的 Markdown 檔案 (.md)。
+    * 檔案命名格式：
+     $$\text{YYYY-MM-DD-文章標題.md}$$
+    * 範例：2025-10-31-my-first-reading-notes.md
+3. 撰寫內容（包含 Front Matter）：
+    * 在檔案的最開頭，加入 Jekyll 必需的 Front Matter (前置資料)
+    ```
+    ---
+    layout: post
+    title: "我的第一篇閱讀心得：關於《[書名]》"
+    date: 2025-10-31 10:25:46 +0800
+    categories: [閱讀, 哲學, 心得]  # 可自行定義分類標籤
+    ---
+
+    # 這是文章的主標題
+
+    ## 核心觀點
+
+    這本書最吸引我的地方是...
+
+    ## 語法示範 (Markdown)
+
+    這是一個 **粗體** 示範。
+
+    這是一個 *斜體* 示範。
+
+    * 這是
+    * 一個
+    * 清單
+
+    ---
+    [**繼續閱讀**]
+    ```
+步驟六：發佈您的心得
+當您在本地寫好文章後，就可以將它推送到 GitHub，讓網站更新。
+1. 儲存檔案： 確保您的 Markdown 檔案已儲存。
+2. 使用 Git 提交變更： 在終端機中，切換到您的部落格資料夾 (your-username.github.io)，執行以下指令：
+```
+    git add .
+    git commit -m "Add my first reading note: [書名]"
+    git push origin main  # 或是您儲存庫的主分支名稱
+```
+
+3. 等待發佈：
+* Git 推送成功後，GitHub Pages 會再次自動建置。
+* 稍等幾分鐘（通常 1 到 5 分鐘），重新整理您的部落格網址，您就能看到新的閱讀心得發佈了！
+
+您現在就有了一個完全由您控制、免費託管在 GitHub 上的個人部落格了！
