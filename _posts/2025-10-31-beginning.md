@@ -89,6 +89,7 @@ cd your-username.github.io
     * 範例：2025-10-31-my-first-reading-notes.md
 3. 撰寫內容（包含 Front Matter）：
     * 在檔案的最開頭，加入 Jekyll 必需的 Front Matter (前置資料)
+
 ```
     ---
     layout: post
@@ -114,8 +115,8 @@ cd your-username.github.io
     * 清單
 
     ---
-    [**繼續閱讀**]
-```   
+    [**繼續閱讀**]    
+```
 
 ### 步驟六：發佈您的心得
 當您在本地寫好文章後，就可以將它推送到 GitHub，讓網站更新。
