@@ -1,6 +1,6 @@
 ---
-layout: default
-title: "GitHubPage-blog"
+layout: post
+title: "start GitHubPage"
 date: 2025-10-31 10:45:00 +0800  # 確保日期與檔名一致
 categories: [心得]     # 定義標籤和分類
 ---
