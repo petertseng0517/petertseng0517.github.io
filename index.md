@@ -10,8 +10,9 @@ title: Peter Study
 > 每天寫 code、每天發作品、每天進步 1%
 
 ## 🔥 最新作品
+
 | 作品 | 技術 | 連結 |
-|------|------|------|
+| ---- | ---- | ---- |
 | 即時匯率轉換器 | React + API | [demo]() |
 | 個人履歷網站 | HTML/CSS/JS | [petertseng0517.github.io]() |
 
