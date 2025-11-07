@@ -5,7 +5,7 @@ title: Peter Study
 # 歡迎來到我的閱讀心得與筆記
 ![把一件事做好做精](/assets/images/coding-bk.jpg)
 
-# 彼得・曾 | 自學前端工程師
+# Peter Tseng | 自學前端工程師
 
 > 每天寫 code、每天發作品、每天進步 1%
 
