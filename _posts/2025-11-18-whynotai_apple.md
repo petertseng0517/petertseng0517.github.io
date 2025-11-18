@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Gemini vs. Gemini-CLI: 差異解析"
+title:  "為何Apple不放棄Siri?"
 date:   2025-11-18 10:30:00 +0800
 categories: AI
 ---
