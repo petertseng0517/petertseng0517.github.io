@@ -23,7 +23,7 @@ Gemini 的核心是其作為一個基礎模型的角色，它提供了強大的�
 
 ### 什麼是 Gemini-CLI？
 
-**Gemini-CLI** (Gemini Command-Line Interface) 是一個命令列工具，它允許使用者透過文字命令與 Gemini 模型或其他相關服務進行互動。簡單來說，Gemini-CLI 是連接使用者與 Gemini AI 模型之間的一個橋樑，它提供了一種非圖形化的方式來：
+**Gemini-CLI** (Gemini Command-Line Interface) 是一個命令列工具，它允許使用者透過文字命令與 Gemini 模型或其他相關服務進行互動。簡單來說，Gemini-CLI 是連接使用者與 Gemini AI 模型之間的一個橋樑，它提供了一種非圖形化的方式來
 
 *   **發送請求**: 向 Gemini 模型提交提示 (prompts)，例如提問、請求程式碼生成、文本摘要等。
 *   **接收回應**: 在命令列中顯示 Gemini 模型的回應。
