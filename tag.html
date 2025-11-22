@@ -1,0 +1,94 @@
+---
+layout: default
+title: "Posts tagged with"
+---
+
+<h1 id="tag-title"></h1>
+
+<div id="tag-posts-container"></div>
+
+<div id="pagination-container"></div>
+
+<style>
+  #pagination-container a {
+    margin: 0 5px;
+    text-decoration: none;
+  }
+</style>
+
+<script>
+  const posts = [
+    {% for post in site.posts %}
+      {
+        "title": "{{ post.title | escape }}",
+        "url": "{{ site.baseurl }}{{ post.url }}",
+        "date": "{{ post.date | date_to_string }}",
+        "tags": [{% for tag in post.tags %}"{{ tag }}"{% unless forloop.last %}, {% endunless %}{% endfor %}]
+      }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ];
+
+  const postsPerPage = 15;
+  let currentPage = 1;
+
+  const tagTitleElement = document.getElementById('tag-title');
+  const postsContainer = document.getElementById('tag-posts-container');
+  const paginationContainer = document.getElementById('pagination-container');
+
+  function getQueryParam(param) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(param);
+  }
+
+  function displayPosts(tag, page) {
+    postsContainer.innerHTML = '';
+    const filteredPosts = posts.filter(post => post.tags.includes(tag));
+    
+    tagTitleElement.innerText = `Posts tagged with "${tag}"`;
+
+    const startIndex = (page - 1) * postsPerPage;
+    const endIndex = startIndex + postsPerPage;
+    const paginatedPosts = filteredPosts.slice(startIndex, endIndex);
+
+    const postList = document.createElement('ul');
+    postList.className = 'posts'; // Use existing class for some styling
+    paginatedPosts.forEach(post => {
+      const listItem = document.createElement('li');
+      listItem.innerHTML = `<a href="${post.url}">${post.title}</a> <small>(${post.date})</small>`;
+      postList.appendChild(listItem);
+    });
+    postsContainer.appendChild(postList);
+
+    displayPagination(filteredPosts.length, page, tag);
+  }
+
+  function displayPagination(totalPosts, currentPage, tag) {
+    paginationContainer.innerHTML = '';
+    const totalPages = Math.ceil(totalPosts / postsPerPage);
+
+    if (totalPages > 1) {
+      for (let i = 1; i <= totalPages; i++) {
+        const pageLink = document.createElement('a');
+        pageLink.href = `?tag=${tag}&page=${i}`;
+        pageLink.innerText = i;
+        if (i === currentPage) {
+          pageLink.style.fontWeight = 'bold';
+        }
+        pageLink.addEventListener('click', (e) => {
+          e.preventDefault();
+          currentPage = i;
+          displayPosts(tag, currentPage);
+          history.pushState(null, '', `?tag=${tag}&page=${i}`);
+        });
+        paginationContainer.appendChild(pageLink);
+      }
+    }
+  }
+
+  const tag = getQueryParam('tag');
+  const page = parseInt(getQueryParam('page')) || 1;
+  if (tag) {
+    displayPosts(tag, page);
+  }
+
+</script>
