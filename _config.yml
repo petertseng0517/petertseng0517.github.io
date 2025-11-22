@@ -1,3 +1,5 @@
-theme: Minimal Mistakes
+remote_theme: "mmistakes/minimal-mistakes"
 title: Peter的閱讀心得
 description: 這裡分享我的學習筆記。
+plugins:
+  - jekyll-include-cache

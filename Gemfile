@@ -3,3 +3,4 @@ source "https://rubygems.org"
 gem "jekyll"
 # 這行確保您擁有 GitHub Pages 環境所需的所有套件
 gem "github-pages", group: :jekyll_plugins
+gem "jekyll-include-cache", group: :jekyll_plugins
