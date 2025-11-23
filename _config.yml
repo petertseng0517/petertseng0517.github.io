@@ -20,8 +20,8 @@ baseurl: ""
 # -------------------------------------------------------------------------
 # Theme & Plugins (主題與外掛)
 # -------------------------------------------------------------------------
-#(暫時先註解) remote_theme: mmistakes/minimal-mistakes
-theme: minimal-mistakes-jekyll
+remote_theme: mmistakes/minimal-mistakes
+#(暫時先註解)theme: minimal-mistakes-jekyll
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
