@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "Gemini vs. Gemini-CLI: 差異解析"
 date:   2025-11-16 10:00:00 +0800
 categories: AI CLI

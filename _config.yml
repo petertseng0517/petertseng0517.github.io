@@ -1,5 +1,101 @@
-remote_theme: "mmistakes/minimal-mistakes"
-title: Peter的閱讀心得
-description: 這裡分享我的學習筆記。
+# -------------------------------------------------------------------------
+# Site Settings (網站基本資訊)
+# -------------------------------------------------------------------------
+title: "Peter Tseng's Tech Blog" # <--- 這裡改成你的網站標題
+email: "your-email@example.com"  # <--- 你的 Email
+description: >- # <--- 網站描述 (對 SEO 很重要)
+  這是 Peter Tseng 的技術部落格，記錄前端開發、AI 應用、伺服器管理與學習筆記。
+twitter_username: "petertseng0517" # 如果沒有可以拿掉
+github_username: "petertseng0517"
+minimal_mistakes_skin: "air" # 推薦樣式: "air", "sunrise", "default", "dark"
+search: true # 開啟搜尋功能
+
+# -------------------------------------------------------------------------
+# Build Settings (建置與路徑設定 - 最重要！)
+# -------------------------------------------------------------------------
+# 因為你是 User Page (petertseng0517.github.io)，這兩行設定如下：
+url: "https://petertseng0517.github.io"
+baseurl: "" 
+
+# -------------------------------------------------------------------------
+# Theme & Plugins (主題與外掛)
+# -------------------------------------------------------------------------
+#(暫時先註解) remote_theme: mmistakes/minimal-mistakes
+theme: minimal-mistakes-jekyll
 plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
   - jekyll-include-cache
+  - jekyll-remote-theme # 確保 GitHub Actions 能抓到遠端主題
+
+# -------------------------------------------------------------------------
+# Localization (在地化設定)
+# -------------------------------------------------------------------------
+locale: "zh-TW"      # 設定語言為台灣繁體 (這會影響「閱讀更多」、「發布日期」等文字)
+timezone: "Asia/Taipei" # 設定時區，確保文章日期正確
+
+# -------------------------------------------------------------------------
+# Author Data (作者資訊 - 顯示在側邊欄)
+# -------------------------------------------------------------------------
+author:
+  name: "Peter Tseng"
+  avatar: "/assets/images/avatar.jpg" # <--- 請記得放一張照片到這個路徑，不然會顯示破圖
+  bio: "前端工程師 | 網站管理 | AI 技術愛好者"
+  location: "Taiwan"
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/petertseng0517"
+    # - label: "Facebook"
+    #   icon: "fab fa-fw fa-facebook-f"
+    #   url: "https://facebook.com/..."
+
+# -------------------------------------------------------------------------
+# Defaults (預設行為設定 - 這裡控制每一頁長什麼樣子)
+# -------------------------------------------------------------------------
+defaults:
+  # _posts (文章) 的預設設定
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single        # 使用單篇文章版型
+      author_profile: true  # 顯示左側作者欄
+      read_time: true       # 顯示閱讀時間預估
+      comments: true        # 開啟留言 (需另外設定 Disqus 或 Giscus)
+      share: true           # 顯示分享按鈕
+      related: true         # 顯示底部相關文章
+      toc: true             # 開啟目錄 (Table of Contents)
+      toc_sticky: true      # 目錄固定在右側隨捲動移動
+      toc_label: "目錄"      # 目錄的標題文字
+
+  # _pages (一般頁面) 的預設設定
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+
+# -------------------------------------------------------------------------
+# Pagination (分頁設定)
+# -------------------------------------------------------------------------
+paginate: 5 # 每頁顯示幾篇文章
+paginate_path: "/page:num/"
+
+# -------------------------------------------------------------------------
+# Output Configuration (輸出設定)
+# -------------------------------------------------------------------------
+atom_feed:
+  hide: true # 隱藏 Atom feed (通常用 RSS 就好)
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  syntax_highlighter: rouge
+sass:
+  style: compressed

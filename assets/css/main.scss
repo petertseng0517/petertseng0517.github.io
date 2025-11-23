@@ -1,0 +1,11 @@
+---
+# Front Matter 區塊
+---
+
+@charset "utf-8";
+
+// 1. 皮膚 (Log 證明這行成功了)
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; 
+
+// 2. 主程式 (如果網頁還是醜的，肯定是你漏了這一行！)
+@import "minimal-mistakes";

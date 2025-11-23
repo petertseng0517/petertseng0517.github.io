@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "開始使用GitHubPage作為我的分享網站"
 date: 2025-10-31 10:45:00 +0800  # 確保日期與檔名一致
 categories: [github]     # 定義標籤和分類

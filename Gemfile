@@ -1,6 +1,17 @@
 source "https://rubygems.org"
-# 這行確保您可以使用 Jekyll 的核心功能
+
 gem "jekyll"
-# 這行確保您擁有 GitHub Pages 環境所需的所有套件
-gem "github-pages", group: :jekyll_plugins
-gem "jekyll-include-cache", group: :jekyll_plugins
+
+# 關鍵：加入這一行，讓本地端能直接存取 CSS 原始檔
+gem "minimal-mistakes-jekyll"
+
+group :jekyll_plugins do
+  gem "jekyll-feed"
+  gem "jekyll-sitemap"
+  gem "jekyll-paginate"
+  gem "jekyll-include-cache" # 這個主題強烈依賴這個外掛
+  gem "jekyll-remote-theme"
+end
+
+# Windows 系統可能需要這行，Mac 通常不需要，但留著無妨
+gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]

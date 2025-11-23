@@ -1,0 +1,21 @@
+# _data/navigation.yml
+
+main:
+  - title: "首頁"
+    url: /
+  
+  - title: "關於我"
+    url: /about/
+  
+  - title: "所有文章"
+    url: /year-archive/
+    
+  - title: "分類"
+    url: /categories/
+    
+  - title: "標籤"
+    url: /tags/
+  
+  # 如果你有外部連結 (例如作品集或醫院官網)，可以這樣加：
+  # - title: "外部連結範例"
+  #   url: https://google.com
