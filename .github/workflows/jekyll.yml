@@ -35,9 +35,6 @@ jobs:
         with:
           ruby-version: '3.0' # You may need to change this to match your project's Ruby version
           bundler-cache: true # runs 'bundle install' and caches installed gems automatically
-      - name: Setup Pages
-        id: pages
-        uses: actions/configure-pages@v5
       - name: Build with Jekyll
         run: bundle exec jekyll build --source . --destination ./_site
         env:
@@ -45,15 +42,11 @@ jobs:
       - name: Find symlinks for debugging
         run: find _site -type l -ls
       - name: Dereference symlinks
-        run: |
-          cp -RL _site _site_final
-          rm -rf _site
-          mv _site_final _site
-      - name: Upload artifact
-        uses: actions/upload-artifact@v4
+        run: cp -RL _site _site_final
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          name: github-pages
-          path: ./_site
+          path: ./_site_final
 
   # Deployment job
   deploy:
