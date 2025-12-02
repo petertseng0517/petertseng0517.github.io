@@ -42,6 +42,11 @@ jobs:
         run: bundle exec jekyll build --source . --destination ./_site
         env:
           JEKYLL_ENV: production
+      - name: Dereference symlinks
+        run: |
+          cp -RL _site _site_final
+          rm -rf _site
+          mv _site_final _site
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
