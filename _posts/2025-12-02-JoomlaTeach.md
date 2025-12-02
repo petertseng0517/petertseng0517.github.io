@@ -4,10 +4,12 @@ date:   2025-12-02 20:00:00 +0800
 categories: joomla
 tags: [joomla]
 ---
-* 作者：曾建瑋(花蓮慈濟醫院公共傳播室多媒體組網管, 分機 #15295)
+
+- 作者：曾建瑋(花蓮慈濟醫院公共傳播室多媒體組網管, 分機 #15295)
+
 # 基礎教學
 ## 1. 取得Joomla管理帳號
-* 目標：學習取得網站的Joomla帳號
+- 目標：學習取得網站的Joomla帳號
 
 ### 步驟說明
 1. 點選：醫院Notes系統 》 各類申請單 》 公共傳播類(網站維護及製作申請) 》建立新申請
@@ -16,10 +18,10 @@ tags: [joomla]
 4. 說明欄位：申請管理權限帳號。請先提供公傳申請者相關資訊資訊，包括：姓名, 分機, email, 帳號, 申請緣由。
 5. 審核通過後，會將帳密寄到申請者電子信箱
 ### 操作影片
-* 影片教學：[如何取得Joomla管理帳號](https://www.youtube.com/watch?v=3FKh20c0fOU)
+- 影片教學：[如何取得Joomla管理帳號](https://www.youtube.com/watch?v=3FKh20c0fOU)
 
 ## 2.登入Joomla系統
-* 目標：提供管理者慈院Joomla網站管理的統一入口
+- 目標：提供管理者慈院Joomla網站管理的統一入口
 ### 步驟說明
 1. 進入花蓮慈院[員工內網](https://hlhome.tzuchi.com.tw/) （需用院內網路）
 2. 點選[公共傳播室](https://hlm.tzuchi.com.tw/pc/) >>  網站維護([各部門網站管理後台](https://hlm.tzuchi.com.tw/pc/index.php/web-admin)) >> 選擇你要管理的網站
