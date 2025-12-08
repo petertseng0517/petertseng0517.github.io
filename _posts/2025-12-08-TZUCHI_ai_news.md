@@ -1,9 +1,10 @@
 ---
-title:  "Diffusion Model: 用Fooocus生成圖片"
+title:  "智慧醫療輿情助理"
 date:   2025-12-08 10:00:00 +0800
 categories: ai
 tags: [groq, llama3,BeautifulSoup4,  ]
 ---
+專案動機： 因為目前任職於花蓮慈濟醫院公共傳播室，日常工作涉及大量醫療衛教新聞的監測、官網內容維護以及針對網路健康議題的輿情分析。傳統的人工搜集與篩選方式耗時且難以即時覆蓋所有資訊源。希望透過利用生成式 AI 技術，建構一套「人機協作」的智慧輔助工具，加速新聞篩選與文案產出的流程。
 
 [![曾建瑋的生成式ai期末專案影片](https://img.youtube.com/vi/lnVmzDw4ax4/0.jpg)](https://www.youtube.com/watch?v=lnVmzDw4ax4)
 
