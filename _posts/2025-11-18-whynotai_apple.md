@@ -2,7 +2,7 @@
 title:  "為何Apple不放棄Siri?"
 date:   2025-11-18 10:30:00 +0800
 categories: AI
-tags: [Apple, Siri, AI, ChatGPT, Google, Gemini]
+tags: [Apple, Siri, ai, ChatGPT, Google, Gemini]
 ---
 
 今天我設定我的iPhone16的爛siri，讓他能開啟第三方(chatGPT)，接著嘗試給他一下問題(稱不上任務)，結果一樣讓人噴血。我想講段長一點的描述，把任務說明清楚，但siri依然很笨，還是非得要一問一答，才能進入開啟chatGPT環節，對話體驗也不好，任務結果也不如預期。因此，我產生以下疑問：
