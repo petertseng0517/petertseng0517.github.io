@@ -1,10 +1,10 @@
 # -------------------------------------------------------------------------
 # Site Settings (網站基本資訊)
 # -------------------------------------------------------------------------
-title: "碼上心經：曾建瑋的部落格" # <--- 這裡改成你的網站標題
+title: "曾建瑋的部落格" # <--- 這裡改成你的網站標題
 email: "peter.qfx@gmail.com"  # <--- 你的 Email
 description: >-
-  碼上心經：人到中年，以 AI、Coding 為修行，記錄 LLM 影片生成等前沿技術的學習歷程與實戰心得。這裡不僅有演算法邏輯，更有對生命、無常的哲學反思。一個充滿智慧、不惑之年的個人技術與心靈筆記。
+  碼上心經：人到中年，以 AI、Coding 為修行，記錄 LLM 影片生成等前沿技術的學習歷程與實戰筆記。
 twitter_username: "petertseng_tw" # 如果沒有可以拿掉
 github_username: "petertseng0517"
 minimal_mistakes_skin: "air" # 推薦樣式: "air", "sunrise", "default", "dark"
@@ -42,7 +42,7 @@ timezone: "Asia/Taipei" # 設定時區，確保文章日期正確
 author:
   name: "Peter Tseng"
   avatar: "/assets/images/avatar.jpg" # <--- 請記得放一張照片到這個路徑，不然會顯示破圖
-  bio: "中年迭代 | LLM 實踐 | 心經筆錄"
+  bio: "中年筆錄 | LLM 實踐"
   location: "Taiwan"
   links:
     - label: "GitHub"
