@@ -100,11 +100,11 @@ https://huggingface.co/spaces/petertsengtw/tzuchinews_ai
 系統畫面如下
 ![ai_news](/assets/images/ai_news.png)
 
-## 單篇網址分析(Single-Analysis)
+### 單篇網址分析(Single-Analysis)
 ![Single-Analysis](/assets/images/single.png)
 
-## 批次/RSS掃描(Batch Scan)
+### 批次/RSS掃描(Batch Scan)
 ![Batch Scan](/assets/images/RSS.png)
 
-## 關鍵字監測(Keyword Watch)
+### 關鍵字監測(Keyword Watch)
 ![Keyword Watch](/assets/images/Keyword.png)
