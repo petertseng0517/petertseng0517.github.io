@@ -8,16 +8,15 @@ tags: [groq, llama3,BeautifulSoup4,  ]
 
 [![曾建瑋的生成式ai期末專案影片](https://img.youtube.com/vi/lnVmzDw4ax4/0.jpg)](https://www.youtube.com/watch?v=lnVmzDw4ax4)
 
-- 系統網址:
-https://huggingface.co/spaces/petertsengtw/tzuchinews_ai
-- 介紹影片: https://www.youtube.com/watch?v=lnVmzDw4ax4
+- [系統網址](https://huggingface.co/spaces/petertsengtw/tzuchinews_ai)
+- [影片介紹](https://www.youtube.com/watch?v=lnVmzDw4ax4)
 - [簡報檔下載](/file/1218.pdf)
 
 ## 一、使用模型
 我選擇使用 Groq 平台搭配 Llama 3.1 8B Instant 模型，原因如下：
-1. 極致的推理速度 (Speed / Low Latency)
+1. 推理速度 (Speed / Low Latency)
     - 專案應用：對於「新聞監測與分析」場景，特別是「Batch Scan (批量掃描)」功能，速度至關重要。使用 Groq可以讓使用者在輸入多個網址後，幾乎「即時」看到分析結果，而不需要像使用 GPT-4 或舊版 Gemini 那樣等待許久。
-2. 高性價比與效率 (Cost-Efficiency)
+2. 高性價比 (Cost-Efficiency)
     - 模型大小：程式碼中選用的 llama-3.1-8b-instant 屬於 80 億參數的輕量級模型。相比於 70B 或 400B 的大模型，它的運算成本低得多。
     - API 成本：Groq 目前提供非常具競爭力的價格（甚至包含高額度的免費層級），這對於需要頻繁呼叫 API 進行「初步篩選(analyze_relevance_only)」的應用來說，能大幅降低營運成本。
 3. 足夠的任務能力 (Performance "Good Enough")
