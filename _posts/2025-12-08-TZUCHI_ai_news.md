@@ -4,14 +4,16 @@ date:   2025-12-08 10:00:00 +0800
 categories: ai
 tags: [groq, llama3,BeautifulSoup4,  ]
 ---
-專案動機： 因為目前任職於花蓮慈濟醫院公共傳播室，日常工作涉及大量醫療衛教新聞的監測、官網內容維護以及針對網路健康議題的輿情分析。傳統的人工搜集與篩選方式耗時且難以即時覆蓋所有資訊源。希望透過利用生成式 AI 技術，建構一套「人機協作」的智慧輔助工具，加速新聞篩選與文案產出的流程。
+114a期末專案「生成式ai」選題動機： 因目前任職於花蓮慈濟醫院公共傳播室，日常工作涉及大量醫療衛教新聞的監測、官網內容維護以及針對網路健康議題的輿情分析。傳統人工搜集與篩選方式耗時且難以即時覆蓋所有資訊源。希望透過利用生成式 AI 技術，建構一套「人機協作」的智慧輔助工具，加速新聞篩選與文案產出的流程。
 
 [![曾建瑋的生成式ai期末專案影片](https://img.youtube.com/vi/lnVmzDw4ax4/0.jpg)](https://www.youtube.com/watch?v=lnVmzDw4ax4)
 
-- 系統部署網址
+- 系統網址:
 https://huggingface.co/spaces/petertsengtw/tzuchinews_ai
+- 介紹影片: https://www.youtube.com/watch?v=lnVmzDw4ax4
+- [簡報檔下載](/file/1218.pdf)
 
-## 一、使用的模型
+## 一、使用模型
 我選擇使用 Groq 平台搭配 Llama 3.1 8B Instant 模型，原因如下：
 1. 極致的推理速度 (Speed / Low Latency)
     - 專案應用：對於「新聞監測與分析」場景，特別是「Batch Scan (批量掃描)」功能，速度至關重要。使用 Groq可以讓使用者在輸入多個網址後，幾乎「即時」看到分析結果，而不需要像使用 GPT-4 或舊版 Gemini 那樣等待許久。
@@ -26,7 +28,7 @@ https://huggingface.co/spaces/petertsengtw/tzuchinews_ai
 
 所以我選用 Groq + Llama 3.1 8B 是一個「速度優先、成本優化」的考量。它讓「新聞篩選助手」能夠像搜尋引擎一樣快速反應，而不是像傳統 AI 聊天機器人那樣慢條斯理。
 
-## 二、說明專案想達成的目的
+## 二、專案目的
 這個專案（Healthcare Insight Agent，花蓮慈濟醫院 AI 新聞監測系統）的主要目的，是透過 AI 自動化技術，解決公傳室與決策層面臨的資訊過載 (Information Overload)問題，並提升輿情反應的速度與精準度。
 具體來說，此專案旨在達成以下三個核心目標：
 
@@ -42,7 +44,7 @@ https://huggingface.co/spaces/petertsengtw/tzuchinews_ai
 
 總結：此系統是為了打造一個全天候、高效率且具備判斷力的數位助手，協助花蓮慈濟醫院公傳團隊在海量資訊中，精準捕捉每一條對醫院形象與營運至關重要的情報。
 
-## 三、以文字+截圖的方式來呈現專案重點（包括調整、引導的過程）
+## 三、專案重點
 ### 系統架構圖
 執行流程 (Workflow)：三個主要階段：
 1. 資料獲取 (Data Acquisition)：
@@ -93,7 +95,7 @@ https://huggingface.co/spaces/petertsengtw/tzuchinews_ai
 ![fetch_with_selenium](/assets/images/fetch_with_selenium.png)
 
 
-## 四、專案最終成果。
+## 四、最終成果。
 系統網址：https://huggingface.co/spaces/petertsengtw/tzuchinews_ai
 系統畫面如下
 ![ai_news](/assets/images/ai_news.png)
