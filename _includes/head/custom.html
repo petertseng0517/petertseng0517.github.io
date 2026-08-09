@@ -15,7 +15,8 @@
   "alternateName": ["Peter Tseng", "曾建瑋 Peter Tseng"],
   "url": "{{ site.url }}/",
   "image": "{{ site.url }}{{ site.author.avatar }}",
-  "description": "任職於花蓮慈濟醫院公共傳播室，工作涉及醫療衛教新聞監測、官網內容維護，以及網路健康議題的輿情分析。",
+  "description": "任職於花蓮慈濟醫院公共傳播室，工作涉及醫療衛教新聞監測、官網內容維護，以及網路健康議題的輿情分析。曾於慈濟醫院癌症中心負責癌症篩檢管理系統，並於花蓮縣政府社會處推動智慧福利服務躍升計畫。",
+  "jobTitle": "Website Administrator",
   "worksFor": {
     "@type": "MedicalOrganization",
     "name": "花蓮慈濟醫院",
@@ -25,13 +26,36 @@
     "@type": "Place",
     "name": "花蓮，臺灣"
   },
+  "alumniOf": [
+    {
+      "@type": "CollegeOrUniversity",
+      "name": "國立東華大學",
+      "url": "https://www.ndhu.edu.tw/"
+    },
+    {
+      "@type": "CollegeOrUniversity",
+      "name": "中華大學",
+      "url": "https://www.chu.edu.tw/"
+    }
+  ],
+  {% comment %}
+    獎項名稱是這頁識別力最強的字串：同名的人不會有 SNQ 標章。
+    jobTitle 只放實際職稱，研究與專案涉及的範圍交給 knowsAbout 表達。
+  {% endcomment %}
+  "award": [
+    "2018 年醫學中心組癌症篩檢創意金獎",
+    "2018 年 SNQ 國家品質標章（智慧化癌症篩檢）"
+  ],
   "knowsAbout": [
     "醫療資訊",
     "人工智慧",
     "大型語言模型",
     "醫療衛教傳播",
     "網路輿情分析",
-    "網站內容維護"
+    "癌症篩檢資訊系統",
+    "LINE Bot 開發",
+    "數位政府服務",
+    "網站維運"
   ],
   "mainEntityOfPage": "{{ site.url }}/about/",
   "sameAs": {{ site.social.links | jsonify }}
