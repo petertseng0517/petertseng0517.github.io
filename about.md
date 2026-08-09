@@ -1,5 +1,8 @@
 ---
-title: "關於我"
+# 標題帶上姓名：這頁是人名查詢最主要的落地頁，h1 只寫「關於我」等於浪費一次識別機會。
+title: "關於曾建瑋 Peter Tseng"
+# 需要自己的描述；沿用站台預設的話，搜尋摘要會跟首頁一模一樣。
+description: "曾建瑋（Peter Tseng）：花蓮慈濟醫院公共傳播室，負責醫療衛教新聞監測、官網內容維護與網路健康議題輿情分析。個人網站記錄 AI、程式開發與生活隨筆。"
 permalink: /about/
 layout: single
 author_profile: true

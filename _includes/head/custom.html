@@ -1,3 +1,44 @@
+{% if page.url == "/" or page.url == "/about/" %}
+{% comment %}
+  補充版 Person 結構化資料。
+  主題自帶的 seo.html 只輸出 name / url / sameAs，無法表達「這個曾建瑋是誰」。
+  對人名查詢來說，worksFor 與 knowsAbout 才是把本人跟其他同名者分開的關鍵。
+  @id 讓這段與主題輸出的那段被辨識為同一實體，而非兩個人。
+  只在首頁與關於頁輸出，其餘頁面不需要重複宣告。
+{% endcomment %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "{{ site.url }}/#person",
+  "name": "曾建瑋",
+  "alternateName": ["Peter Tseng", "曾建瑋 Peter Tseng"],
+  "url": "{{ site.url }}/",
+  "image": "{{ site.url }}{{ site.author.avatar }}",
+  "description": "任職於花蓮慈濟醫院公共傳播室，工作涉及醫療衛教新聞監測、官網內容維護，以及網路健康議題的輿情分析。",
+  "worksFor": {
+    "@type": "MedicalOrganization",
+    "name": "花蓮慈濟醫院",
+    "url": "https://hlm.tzuchi.com.tw/home/"
+  },
+  "homeLocation": {
+    "@type": "Place",
+    "name": "花蓮，臺灣"
+  },
+  "knowsAbout": [
+    "醫療資訊",
+    "人工智慧",
+    "大型語言模型",
+    "醫療衛教傳播",
+    "網路輿情分析",
+    "網站內容維護"
+  ],
+  "mainEntityOfPage": "{{ site.url }}/about/",
+  "sameAs": {{ site.social.links | jsonify }}
+}
+</script>
+{% endif %}
+
 <style>
   /* ==========================================================
      深藍夜色主題 (Midnight Blue)
