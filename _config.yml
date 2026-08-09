@@ -100,7 +100,11 @@ defaults:
       read_time: true       # 顯示閱讀時間預估
       header:
         teaser: /assets/images/coding-bk.jpg
-      comments: true        # 開啟留言 (需另外設定 Disqus 或 Giscus)
+      # 留言目前關閉。這個開關要搭配下方的 comments.provider 才會生效，
+      # 只設 true 而沒有 provider 的話不會輸出任何留言區（等於空轉）。
+      # 日後要開：先在 comments: 區塊設 provider（giscus 需先安裝
+      # https://github.com/apps/giscus 到本 repo），再把這裡改回 true。
+      comments: false
       share: true           # 顯示分享按鈕
       related: true         # 顯示底部相關文章
       toc: true             # 開啟目錄 (Table of Contents)
