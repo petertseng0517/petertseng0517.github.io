@@ -1,48 +1,69 @@
 <style>
   /* ==========================================================
-     終端機風格主題 (Terminal Theme): 黑底綠字
+     深藍夜色主題 (Midnight Blue)
+     底色帶藍的深灰，文字柔和淺藍白，強調色天藍 + 淡紫。
+     標題保留等寬字帶技術感，內文改一般字體顧及中文可讀性。
      ========================================================== */
   :root {
-    --term-bg: #0a0d0a;
-    --term-bg-alt: #000000;
-    --term-fg: #33ff66;
-    --term-fg-dim: #1f9c46;
-    --term-fg-bright: #7CFFA0;
-    --term-border: #1f7a3f;
-    --term-selection: #145c2b;
+    --site-bg: #161c26;
+    --site-bg-alt: #0f141c;
+    --site-fg: #c8d3e0;
+    --site-fg-dim: #8394a8;
+    --site-heading: #e8eef6;
+    --site-accent: #6cb6ff;
+    --site-accent-alt: #a68cff;
+    --site-on-accent: #0f141c;
+    --site-border: #2c3a4d;
+    --site-selection: #2a4666;
+    --site-radius: 3px;
+
+    --site-font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+    --site-font-head: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    --site-font-mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
   }
 
   html, body {
-    background-color: var(--term-bg) !important;
-    color: var(--term-fg) !important;
+    background-color: var(--site-bg) !important;
+    color: var(--site-fg) !important;
   }
 
+  /* 內文用一般字體：中文在等寬字下字距鬆散、可讀性差 */
   body,
   .page__content,
+  .author__content,
+  .author__bio,
+  input, textarea, select, button {
+    font-family: var(--site-font-body) !important;
+  }
+
+  /* 標題與導覽保留等寬字 */
   .page__title,
   .archive__item-title,
   .site-title,
   .site-subtitle,
-  .masthead,
   .greedy-nav,
-  .author__content,
-  .author__bio,
-  .toc,
-  .page__footer,
-  input, textarea, select, button {
-    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace !important;
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--site-font-head) !important;
+  }
+
+  code, pre,
+  .highlight, .highlighter-rouge,
+  .page__meta,
+  .toc .nav__title {
+    font-family: var(--site-font-mono) !important;
   }
 
   ::selection {
-    background: var(--term-selection);
-    color: var(--term-fg-bright);
+    background: var(--site-selection);
+    color: var(--site-heading);
   }
 
   /* 捲軸 */
   ::-webkit-scrollbar { width: 10px; height: 10px; }
-  ::-webkit-scrollbar-track { background: var(--term-bg-alt); }
-  ::-webkit-scrollbar-thumb { background: var(--term-fg-dim); border: 1px solid var(--term-border); }
-  html { scrollbar-color: var(--term-fg-dim) var(--term-bg-alt); }
+  ::-webkit-scrollbar-track { background: var(--site-bg-alt); }
+  ::-webkit-scrollbar-thumb { background: var(--site-border); border-radius: var(--site-radius); }
+  ::-webkit-scrollbar-thumb:hover { background: #3d5170; }
+  html { scrollbar-color: var(--site-border) var(--site-bg-alt); }
 
   /* 版面主要區塊 */
   .masthead,
@@ -55,36 +76,35 @@
   .archive__item,
   .page__hero,
   #main {
-    background-color: var(--term-bg) !important;
-    border-color: var(--term-border) !important;
+    background-color: var(--site-bg) !important;
+    border-color: var(--site-border) !important;
     box-shadow: none !important;
   }
 
   .masthead {
-    border-bottom: 1px solid var(--term-border) !important;
+    border-bottom: 1px solid var(--site-border) !important;
   }
 
   .greedy-nav {
-    background-color: var(--term-bg) !important;
+    background-color: var(--site-bg) !important;
   }
 
   .greedy-nav a,
   .site-title,
   .site-subtitle {
-    color: var(--term-fg) !important;
+    color: var(--site-fg) !important;
   }
 
   .greedy-nav a:hover,
   .greedy-nav .visible-links a:hover {
-    color: var(--term-fg-bright) !important;
+    color: var(--site-accent) !important;
   }
 
   /* 標題與強調 */
   h1, h2, h3, h4, h5, h6,
   .page__title,
   .archive__item-title a {
-    color: var(--term-fg-bright) !important;
-    text-shadow: 0 0 2px rgba(51, 255, 102, 0.35);
+    color: var(--site-heading) !important;
   }
 
   .page__title:before,
@@ -96,134 +116,161 @@
   a,
   .page__content a,
   .archive__item-excerpt a {
-    color: var(--term-fg-bright) !important;
+    color: var(--site-accent) !important;
     text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1px;
   }
 
   a:hover {
-    color: #ffffff !important;
-    background-color: var(--term-fg-dim);
+    color: var(--site-accent-alt) !important;
+    text-decoration-thickness: 2px;
   }
 
   /* 內文文字 */
   p, li, blockquote, .page__content,
   .archive__item-excerpt,
-  .page__meta,
   .author__bio {
-    color: var(--term-fg) !important;
+    color: var(--site-fg) !important;
+  }
+
+  .page__meta,
+  .page__meta a,
+  .archive__item .page__meta {
+    color: var(--site-fg-dim) !important;
   }
 
   /* 引言 / 分隔線 */
   blockquote {
-    border-left: 3px solid var(--term-border) !important;
-    background-color: var(--term-bg-alt) !important;
-    color: var(--term-fg-dim) !important;
+    border-left: 3px solid var(--site-accent-alt) !important;
+    background-color: var(--site-bg-alt) !important;
+    color: var(--site-fg-dim) !important;
   }
 
   hr {
-    border-top: 1px dashed var(--term-border) !important;
+    border-top: 1px solid var(--site-border) !important;
   }
 
   /* 程式碼區塊 */
   code, pre,
   .highlight, .highlighter-rouge {
-    background-color: var(--term-bg-alt) !important;
-    color: var(--term-fg) !important;
-    border: 1px solid var(--term-border) !important;
-    border-radius: 0 !important;
+    background-color: var(--site-bg-alt) !important;
+    color: var(--site-fg) !important;
+    border: 1px solid var(--site-border) !important;
+    border-radius: var(--site-radius) !important;
   }
 
-  code {
-    padding: 2px 4px;
+  /* 行內 code 用次強調色，與連結的藍區隔開 */
+  :not(pre) > code {
+    padding: 2px 5px;
+    color: var(--site-accent-alt) !important;
   }
 
   /* 表格 */
   table {
-    border: 1px solid var(--term-border) !important;
+    border: 1px solid var(--site-border) !important;
   }
 
   table th, table td {
-    background-color: var(--term-bg) !important;
-    color: var(--term-fg) !important;
-    border: 1px solid var(--term-border) !important;
+    background-color: var(--site-bg) !important;
+    color: var(--site-fg) !important;
+    border: 1px solid var(--site-border) !important;
+  }
+
+  table th {
+    color: var(--site-heading) !important;
   }
 
   table tr:nth-child(even) td {
-    background-color: var(--term-bg-alt) !important;
+    background-color: var(--site-bg-alt) !important;
   }
 
   /* 按鈕 / 標籤 */
   .btn,
   .page__taxonomy-item,
   .tag-list-item {
-    background-color: var(--term-bg-alt) !important;
-    color: var(--term-fg) !important;
-    border: 1px solid var(--term-border) !important;
-    border-radius: 0 !important;
+    background-color: var(--site-bg-alt) !important;
+    color: var(--site-fg) !important;
+    border: 1px solid var(--site-border) !important;
+    border-radius: var(--site-radius) !important;
     box-shadow: none !important;
   }
 
   .btn:hover,
+  .page__taxonomy-item:hover,
   .tag-list-item:hover {
-    background-color: var(--term-fg-dim) !important;
-    color: #000000 !important;
+    background-color: var(--site-accent) !important;
+    border-color: var(--site-accent) !important;
+    color: var(--site-on-accent) !important;
   }
 
   /* 作者頭像 */
   .author__avatar img {
-    border: 1px solid var(--term-border) !important;
-    border-radius: 0 !important;
-    filter: grayscale(100%) contrast(1.1) brightness(0.9) sepia(60%) hue-rotate(60deg) saturate(3);
+    border: 1px solid var(--site-border) !important;
+    border-radius: 50% !important;
   }
 
   /* 文章列表縮圖 */
   .archive__item-teaser img,
   .archive__item-teaser-left img {
-    border: 1px solid var(--term-border) !important;
-    border-radius: 0 !important;
-    filter: grayscale(60%) contrast(1.05);
+    border: 1px solid var(--site-border) !important;
+    border-radius: var(--site-radius) !important;
   }
 
   /* 分頁 */
   .pagination li a,
   .pagination--pager {
-    background-color: var(--term-bg-alt) !important;
-    color: var(--term-fg) !important;
-    border: 1px solid var(--term-border) !important;
-    border-radius: 0 !important;
+    background-color: var(--site-bg-alt) !important;
+    color: var(--site-fg) !important;
+    border: 1px solid var(--site-border) !important;
+    border-radius: var(--site-radius) !important;
   }
 
-  .pagination li a:hover {
-    background-color: var(--term-fg-dim) !important;
-    color: #000 !important;
+  .pagination li a:hover,
+  .pagination--pager:hover {
+    background-color: var(--site-accent) !important;
+    border-color: var(--site-accent) !important;
+    color: var(--site-on-accent) !important;
+  }
+
+  .pagination li a.current,
+  .pagination li a.current:hover {
+    background-color: var(--site-accent) !important;
+    border-color: var(--site-accent) !important;
+    color: var(--site-on-accent) !important;
   }
 
   /* 搜尋框 */
   .search__toggle,
   .search-content__form input {
-    color: var(--term-fg) !important;
-    background-color: var(--term-bg-alt) !important;
+    color: var(--site-fg) !important;
+    background-color: var(--site-bg-alt) !important;
+  }
+
+  .search-content__form input::placeholder {
+    color: var(--site-fg-dim) !important;
   }
 
   /* 目錄 (TOC) */
   .toc .nav__title {
-    background-color: var(--term-fg-dim) !important;
-    color: #000 !important;
+    background-color: var(--site-accent) !important;
+    color: var(--site-on-accent) !important;
   }
 
   .toc__menu a {
-    color: var(--term-fg) !important;
+    color: var(--site-fg) !important;
   }
 
   .toc__menu a:hover {
-    color: var(--term-fg-bright) !important;
+    color: var(--site-accent) !important;
+    background-color: var(--site-bg-alt) !important;
   }
 
   /* 首頁文章列表：左圖右文 */
   .list__item {
     margin-bottom: 1.5em;
     padding-bottom: 1.5em;
-    border-bottom: 1px solid var(--term-border);
+    border-bottom: 1px solid var(--site-border);
   }
 
   .list__item .archive__item {
@@ -241,7 +288,6 @@
     width: 150px;
     height: 100px;
     object-fit: cover;
-    border-radius: 4px;
     display: block;
   }
 
