@@ -20,12 +20,31 @@ toc_label: "目錄"
 
 ## 我用程式做了什麼
 
-資訊背景出身，工作卻落在醫院的傳播端。這個位置有個好處：看得見問題，手邊剛好也有工具。下面這幾件事，都是從「這樣做太蠢了吧」開始的：
+資訊背景出身，工作卻落在醫院的傳播端。這個位置有個好處：看得見問題，手邊剛好也有工具。多數東西都是從「這樣做太蠢了吧」開始的。
 
-- [**智慧醫療輿情助理**](/ai/2025/12/08/TZUCHI_ai_news.html) — 用 Groq + Llama 3.1 打造醫院新聞輿情監測系統，含爬蟲、風險評分與自動摘要。原本要人工每天翻新聞，現在讓它自己跑。
-- [**醫院 40 周年紀念網站**](/project/2026/03/31/ai_anniversary_40th.html) — 用 SDD 規格書搭配 AI 協作，在很短的時間內把整個站做出來。
-- [**攝影比賽評分系統**](/diary/2026/07/09/photo-contest.html) — 52 張照片、5 位評審，我跑模擬才發現同分機率高達 96%，於是設計了三層破同分規則。
+### 醫療資料與 AI
+
+- [**口腔癌篩檢異常預測**](https://github.com/petertsengtw/Oral-Cancer-Screening-Abnormality-Prediction) — 以人口特徵、生活習慣風險因子與歷次篩檢紀錄，用機器學習預測篩檢是否出現異常。資料來自花蓮慈濟醫院四癌篩檢資料庫（機構自有、去識別化，原始資料不進版控）。這其實是我十年前那份工作的下一章：當年把篩檢流程收攏成資料庫，現在試著讓那些資料回答問題。
+- [**智慧醫療輿情助理**](/ai/2025/12/08/TZUCHI_ai_news.html) — 用 Groq + Llama 3.1 做醫院新聞輿情監測，含爬蟲、風險評分與自動摘要。原本每天要人工翻新聞，現在讓它自己跑。
+- [**圖書館 AI 客服**](https://github.com/petertsengtw/REG-TZUCHI-Library) — 用 RAG 讓醫院圖書館的常見問題自己回答。
+
+### 建院四十週年
+
+那年院慶的數位需求，大致上是這三件事：
+
+- [**紀念網站**](https://hlm.tzuchi.com.tw/anniversary/) — 純 HTML/CSS/JS，無框架、無後端、無 CDN，含開場動畫與特刊互動翻頁書。（[開發紀錄](/project/2026/03/31/ai_anniversary_40th.html)、[原始碼](https://github.com/petertsengtw/tzuchi_hospital-40th)）
+- [**攝影比賽評分系統**](https://rate-photo.petertseng.me) — FastAPI + SQLite，評審匿名互不可見、投稿者資訊全程隔離、評分送出後鎖定。我跑模擬才發現同分機率高達 96%，於是設計了破同分規則。（[設計過程](/diary/2026/07/09/photo-contest.html)、[原始碼](https://github.com/petertsengtw/rate-photo)）
+- [**拍攝時段預約系統**](https://photography-booking-5d7b5.web.app/) — 每 10 分鐘一個時段，靠 Firestore 做多裝置即時同步，杜絕重複預約。
+
+### 把重複勞動變成工具
+
+- [**繁體中文 PDF 校稿工具**](https://github.com/petertsengtw/chinese-proofreader) — 上傳 PDF、自動判斷橫書直書、呼叫 Claude API 抓錯別字，產出可下載的校稿報告。公傳室的稿子很多，這個省下的時間最實在。
+- [**Word 轉 Joomla**](https://github.com/petertsengtw/doc-to-joomla) — Word 轉 HTML、自動提取圖片上傳伺服器，直接接上 Joomla。
 - [**颱風門診公告產生器**](/diary/2026/07/10/typhoon.html) — 受夠了颱風夜反覆截圖改公告，寫了個上傳 Excel 就自動產生 HTML 的小工具。
+
+### 其他
+
+醫院的[歷史文物館 360° 環景](https://hlm.tzuchi.com.tw/vr/museum.html)、[2024 醫療科技展環景](https://hlm.tzuchi.com.tw/home/index.php/expo2024-vr)、重陽敬老禮金的資格驗證系統，還有[玉里協天宮](https://github.com/petertsengtw/Yuli_Xietian)的官網——那間廟創建於清光緒元年，是花東第一廟。
 
 ## 在這之前
 
