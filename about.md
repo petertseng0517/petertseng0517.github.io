@@ -40,11 +40,25 @@ toc_label: "目錄"
 
 - [**繁體中文 PDF 校稿工具**](https://github.com/petertsengtw/chinese-proofreader) — 上傳 PDF、自動判斷橫書直書、呼叫 Claude API 抓錯別字，產出可下載的校稿報告。公傳室的稿子很多，這個省下的時間最實在。
 - [**Word 轉 Joomla**](https://github.com/petertsengtw/doc-to-joomla) — Word 轉 HTML、自動提取圖片上傳伺服器，直接接上 Joomla。
+- [**醫院新聞自動上稿**](https://github.com/petertsengtw/lotusnotes-com-tools) — 透過 COM API 從 Lotus Notes 撈出新聞稿，再接 Joomla API 直接上架。跟上面那個 Word 工具是同一條線的上下游：稿子從哪裡來、怎麼轉、怎麼進去。
 - [**颱風門診公告產生器**](/diary/2026/07/10/typhoon.html) — 受夠了颱風夜反覆截圖改公告，寫了個上傳 Excel 就自動產生 HTML 的小工具。
+
+### 官網與院內平台
+
+- [**公共傳播室網站**](https://petertsengtw.github.io/hlm-pc/) — 公傳室的對外形象頁，順手把 Joomla 管理教學文件、傳播成效儀表板（YouTube／社群／GA 數據）和圖片轉 WebP 的小工具都收在同一個站上。院內同仁要找什麼，指這裡就好。（[原始碼](https://github.com/petertsengtw/hlm-pc)）
+- [**多版本 Web Server 環境**](https://github.com/petertsengtw/tc_taichung_web) — 用 Docker 讓 PHP 7.4 和 8.3 的 Joomla 站並存，前面掛 Nginx Proxy Manager 依 domain 分流。舊網站一時升不上去，那就讓它們各自活著。
+
+### 在學校寫的
+
+- [**文獻分析助手**](https://github.com/petertsengtw/paper-analyzer) — 上傳論文 PDF，自動產出繁中摘要與優缺點，也能多篇比較。跑在本機的 Ollama + Qwen2.5 上，不外傳、不付 API 費。TAICA「生成式 AI 的人文導論」期末專案。
+- [**HackMD 筆記同步**](https://github.com/petertsengtw/hackmd-sync) — 把雲端筆記整批抓成本地 `.md`，丟進 Obsidian 或給 LLM 讀。筆記寫在雲端很方便，要拿來用的時候就不方便了。
+- [**AI 猜圖小遊戲**](https://github.com/petertsengtw/ai_pictionary) — Flask + Gemini，你在畫布上亂畫，它用繁中猜你畫了什麼。
 
 ### 其他
 
-醫院的[大愛溯源館 360° 環景](https://hlm.tzuchi.com.tw/vr/museum.html)、[2024 醫療科技展環景](https://hlm.tzuchi.com.tw/home/index.php/expo2024-vr)、重陽敬老禮金的資格驗證系統，還有[玉里協天宮](https://github.com/petertsengtw/Yuli_Xietian)的官網——那間廟創建於清光緒元年，是花東第一廟。
+醫院的[大愛溯源館 360° 環景](https://hlm.tzuchi.com.tw/vr/museum.html)、[2024 醫療科技展環景](https://hlm.tzuchi.com.tw/home/index.php/expo2024-vr)、重陽敬老禮金的資格驗證系統，還有[玉里協天宮](https://github.com/petertsengtw/Yuli_Xietian)的官網——那間廟創建於清光緒元年，是花東第一廟。溯源館除了環景，另外有一套[電視牆播放系統](https://github.com/petertsengtw/Tzu-Chi-museum-tv-broadcast-system)，三個螢幕輪播影音——那是我第一次用 PHP 寫東西，沒有後台，檔案還得自己 FTP 丟上去。
+
+再往外一點，[**土雞蛋訂購與管理系統**](https://github.com/petertsengtw/liff-egg-ordering-system)是少數跟醫院、公部門都無關的一個：LINE LIFF 當店面、Flask 接後端、Firestore 存資料、綠界收款，另外做了分批出貨、出貨修正和完整的審計紀錄。農產品沒辦法一次出貨，帳就得追得住。
 
 ## 在這之前
 
