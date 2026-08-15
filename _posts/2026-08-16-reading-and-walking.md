@@ -5,8 +5,10 @@ date: 2026-08-16 20:00:00 +0800
 categories: diary
 tags: [diary, 走讀, 旅行, 中年]
 header:
-  og_image: /assets/images/ocean.jpg
-  teaser: /assets/images/ocean.jpg
+  # 分享縮圖必須是橫式：Facebook 只在 og:image 接近 1.91:1（至少 600×315）時才給大圖版型，
+  # 直式照片一律降級成左側小方塊。ocean.jpg 是 1440×1920 的直幅，所以另外裁一張 1200×630。
+  og_image: /assets/images/ocean-og.jpg
+  teaser: /assets/images/ocean-og.jpg
 ---
 
 ![海](/assets/images/ocean.jpg)
