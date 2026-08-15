@@ -7,7 +7,7 @@ email: "peter.qfx@gmail.com"  # <--- 你的 Email
 # 用來跟其他同名的人區隔（搜尋「曾建瑋」的競爭者含數學老師、機械業務等）。
 description: >-
   曾建瑋（Peter Tseng）的個人網站。任職於花蓮慈濟醫院公共傳播室，
-  記錄醫療資訊、AI 與 LLM 的學習筆記、實作紀錄與生活隨筆。
+  記錄醫療資訊、AI 與 LLM 的學習筆記、實作紀錄，以及生活隨筆與地方走讀。
 twitter_username: "petertsengtw" # 如果沒有可以拿掉
 github_username: "petertsengtw"
 og_image: "/assets/images/avatar.jpg" # 沒有指定 teaser 的頁面（例如首頁）分享縮圖的預設圖
