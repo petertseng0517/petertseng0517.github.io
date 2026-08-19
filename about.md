@@ -32,6 +32,7 @@ toc_label: "目錄"
 
 - [**口腔癌篩檢異常預測**](https://github.com/petertsengtw/Oral-Cancer-Screening-Abnormality-Prediction) — 以人口特徵、生活習慣風險因子與歷次篩檢紀錄，用機器學習預測篩檢是否出現異常。資料來自花蓮慈濟醫院四癌篩檢資料庫（機構自有、去識別化，原始資料不進版控）。這其實是我十年前那份工作的下一章：當年把篩檢流程收攏成資料庫，現在試著讓那些資料回答問題。
 - [**智慧醫療輿情助理**](/ai/2025/12/08/TZUCHI_ai_news.html) — 用 Groq + Llama 3.1 做醫院新聞輿情監測，含爬蟲、風險評分與自動摘要。原本每天要人工翻新聞，現在讓它自己跑。
+- [**粉專留言風險偵測**](https://github.com/petertsengtw/Facebook-fan-page-comment-output-and-risk-content-detection) — 把醫院粉專十一年、14,315 則留言收斂成小編每天看得完的 694 則，標記人身攻擊、機構謾罵、嘲諷與醫療申訴並給嚴重度。不自動隱藏、不自動刪除，處置一律由人工決定。（[開發紀錄](/ai/2026/08/20/comment-risk-detection.html)）
 - [**圖書館 AI 客服**](https://github.com/petertsengtw/REG-TZUCHI-Library) — 用 RAG 讓醫院圖書館的常見問題自己回答。
 
 ### 建院四十週年
@@ -47,6 +48,7 @@ toc_label: "目錄"
 - [**繁體中文 PDF 校稿工具**](https://github.com/petertsengtw/chinese-proofreader) — 上傳 PDF、自動判斷橫書直書、呼叫 Claude API 抓錯別字，產出可下載的校稿報告。公傳室的稿子很多，這個省下的時間最實在。
 - [**Word 轉 Joomla**](https://github.com/petertsengtw/doc-to-joomla) — Word 轉 HTML、自動提取圖片上傳伺服器，直接接上 Joomla。
 - [**醫院新聞自動上稿**](https://github.com/petertsengtw/lotusnotes-com-tools) — 透過 COM API 從 Lotus Notes 撈出新聞稿，再接 Joomla API 直接上架。跟上面那個 Word 工具是同一條線的上下游：稿子從哪裡來、怎麼轉、怎麼進去。
+- [**自動簽到**](https://github.com/petertsengtw/Automatic-check-in-via-visual-recognition) — 每天登入 Lotus Notes、填健康調查、按簽到，同樣三個動作做了幾百次。用電腦視覺辨識畫面元素配合 GUI 自動化，讓它自己跑完。
 - [**颱風門診公告產生器**](/diary/2026/07/10/typhoon.html) — 受夠了颱風夜反覆截圖改公告，寫了個上傳 Excel 就自動產生 HTML 的小工具。
 
 ### 官網與院內平台
@@ -82,7 +84,7 @@ toc_label: "目錄"
 
 ## 這個部落格
 
-站名叫「**碼上心經**」。人到中年，用寫程式和除錯的心態記錄人生，大概是這個意思。
+人到中年，用寫程式和除錯的心態記錄人生，大概就是這個網站在做的事。
 
 這裡的文章原本分成兩種：
 
