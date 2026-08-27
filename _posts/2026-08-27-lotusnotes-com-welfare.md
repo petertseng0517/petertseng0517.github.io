@@ -5,11 +5,11 @@ date: 2026-08-27 21:00:00 +0800
 categories: project
 tags: [lotus-notes, line-liff, firebase, cloud-functions, python, 醫院系統]
 header:
-  og_image: /assets/images/hl_welfare.jpg
-  teaser: /assets/images/hl_welfare.jpg
+  og_image: /assets/images/hl_welfare.png
+  teaser: /assets/images/hl_welfare.png
 ---
 
-![職工福利特約商店優惠查詢](/assets/images/hl_welfare.jpg)
+![職工福利特約商店優惠查詢](/assets/images/hl_welfare.png)
 
 ## 本來只是想方便一點
 
