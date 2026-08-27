@@ -1,7 +1,7 @@
 ---
 title: "把 Lotus Notes 老系統，接上 LINE 官方帳號"
 description: "跑了十幾年的 Lotus Notes 員工優惠資料庫，本來誰都查得到。用 LINE LIFF 加 Cloud Functions 把它關起來，以及一支被鎖死在 32-bit 的 Python 會製造出什麼麻煩。"
-date: 2026-08-28 21:00:00 +0800
+date: 2026-08-27 21:00:00 +0800
 categories: project
 tags: [lotus-notes, line-liff, firebase, cloud-functions, python, 醫院系統]
 header:
